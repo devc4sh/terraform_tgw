@@ -1,5 +1,5 @@
 locals {
-  name_tag = "${var.project}-${var.env}"
+  name_tag = "${var.project}-${var.env}-${var.vpc_name}"
 }
 
 resource "aws_security_group" "sg" {
