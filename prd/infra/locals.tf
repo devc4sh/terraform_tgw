@@ -3,7 +3,7 @@ locals {
   azs    = ["${local.region}a", "${local.region}c"]
 
   # Security Group Rule Managed by csv
-  sg_csvs = fileset("./sg_csv/", "*.csv")
+  sg_csvs = fileset("./sg_csv", "*.csv")
   sg      = toset([for f in local.sg_csvs : trimsuffix(f, ".csv")])
 
   # Subnet Info
