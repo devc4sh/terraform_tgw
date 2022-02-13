@@ -13,22 +13,17 @@ variable "managed" {
   type        = string
 }
 
+variable "vpc_name" {
+  description = "The Name of the VPC"
+  type        = string
+}
+
 variable "vpc_id" {
   description = "The VPC ID you want to use"
   type        = string
 }
 
-variable "vpc_name" {
-  description = "THE VPC NAME"
-  type        = string
-}
-
-variable "subnet_cidrs" {
-  description = "The Subnet CIDR Block"
+variable "sg_rules" {
+  description = "The Rule Set List of the Security Group"
   type        = list(any)
-}
-
-variable "azs" {
-  description = "The List of Availability Zone"
-  type        = list(string)
 }
