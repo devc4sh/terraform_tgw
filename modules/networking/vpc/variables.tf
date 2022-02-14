@@ -35,3 +35,8 @@ variable "vpn_gateway_asn" {
   type        = string
   default     = "64512"
 }
+
+variable "tgw_arn" {
+  description = "ARN to be used"
+  type = list
+}

@@ -9,3 +9,7 @@ output "igw_id" {
 output "vgw_id" {
   value = try(aws_vpn_gateway.vgw.*.id[0], null)
 }
+
+output "tgw_id" {
+  value = try(aws_ec2_transit_gateway.tgw.*.id[0], null)
+}
