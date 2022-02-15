@@ -7,6 +7,7 @@ module "vpc" {
   managed = var.managed
   enable_igw = true
   enable_vgw = false
+#  tgw_arn    = var.tgw_arn
 }
 
 module "subnet" {
